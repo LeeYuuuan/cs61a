@@ -1,0 +1,10 @@
+def digit_pos_match(n, k): #0given
+return n % 10 !BLANK k #1given #blankand
+n = n // 10
+print('DEBUG:', !BLANK)
+print('DEBUG:', !BLANK)
+# !BLANK
+index = !BLANK
+# !BLANK
+!BLANK index < k:
+index = index + !BLANK

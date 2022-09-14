@@ -1,3 +1,39 @@
+
+
+def add_in_range(start, stop):
+    """
+    >>> add_in_range(3, 5)  # .Case 1
+    12
+    >>> add_in_range(1, 10)  # .Case 2
+    55
+    """
+    "*** YOUR CODE HERE ***"
+    sum = 0
+    for i in range(start, stop + 1):
+        sum += i
+    return sum
+
+
+def digit_pos_match(n, k):
+    """
+    >>> digit_pos_match(980, 0) # .Case 1
+    True
+    >>> digit_pos_match(980, 2) # .Case 2
+    False
+    >>> digit_pos_match(98276, 2) # .Case 3
+    True
+    >>> digit_pos_match(98276, 3) # .Case 4
+    False
+    """
+    "*** YOUR CODE HERE ***"
+    for i in range(str(n)):
+        if int(i) == i:
+            return True
+    return False
+
+
+
+
 def falling(n, k):
     """Compute the falling factorial of n to depth k.
 
@@ -11,6 +47,12 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    res = 1
+    if k == 0:
+        return 1
+    for i in range(n, n - k, -1):
+        res *= i
+    return res
 
 
 def sum_digits(y):
@@ -27,6 +69,10 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
+    sum = 0
+    for i in str(y):
+        sum += int(i)
+    return sum
 
 
 def double_eights(n):
@@ -45,3 +91,11 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    str_n = str(n)
+    for i in range(len(str_n) - 1):
+        if int(str_n[i]) == 8 and int(str_n[i+1]) == 8:
+            return True
+    
+    return False
+
+

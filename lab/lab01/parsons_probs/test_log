@@ -1,0 +1,61 @@
+=====================================================================
+Assignment: Lab 1
+OK, version v1.18.1
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running tests
+
+---------------------------------------------------------------------
+Doctests for digit_pos_match
+
+>>> digit_pos_match(980, 0) # .Case 1
+0
+
+# Error: expected
+#     True
+# but got
+#     0
+:( Test Case 1 failed
+---------------------------------------------------------------------
+
+>>> digit_pos_match(980, 2) # .Case 2
+0
+
+# Error: expected
+#     False
+# but got
+#     0
+:( Test Case 2 failed
+---------------------------------------------------------------------
+
+>>> digit_pos_match(98276, 2) # .Case 3
+2
+
+# Error: expected
+#     True
+# but got
+#     2
+:( Test Case 3 failed
+---------------------------------------------------------------------
+
+>>> digit_pos_match(98276, 3) # .Case 4
+3
+
+# Error: expected
+#     False
+# but got
+#     3
+:( Test Case 4 failed
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Test summary
+    0 test cases passed before encountering first failed test case
+
+Backup... 0.0% completeBackup... 100% complete
+[31mBackup past deadline by 230 days and 32 seconds[0m
+[32mBackup successful for user: leeyuanbaby@gmail.com[0m
+[32mURL: https://okpy.org/cal/cs61a/sp22/lab01/backups/DYVJmk[0m
+

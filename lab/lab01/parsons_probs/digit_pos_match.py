@@ -9,4 +9,6 @@ def digit_pos_match(n, k):
     >>> digit_pos_match(98276, 3) # .Case 4
     False
     """
-    "*** YOUR CODE HERE ***"
+    return n % 10 and k
+
+
