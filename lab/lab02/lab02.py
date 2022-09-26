@@ -1,3 +1,6 @@
+from re import X
+
+
 def lambda_curry2(func):
     """
     Returns a Curried version of a two-argument function FUNC.
@@ -90,7 +93,12 @@ def composite_identity(f, g):
     >>> b1(4)                            # (4 + 1)^2 != 4^2 + 1
     False
     """
-    "*** YOUR CODE HERE ***"
+    def func(x):
+        if f(g(x)) == g(f(x)):
+            return True
+        else:
+            return False
+    return func
 
 
 def cycle(f1, f2, f3):
@@ -119,4 +127,26 @@ def cycle(f1, f2, f3):
     >>> do_two_cycles(1)
     19
     """
-    "*** YOUR CODE HERE ***"
+    def ret_fn(n):
+        def ret(x):
+            i = 0
+            while i < n:
+                if i % 3 == 0:
+                    x = f1(x)
+                elif i % 3 == 1:
+                    x = f2(x)
+                else:
+                    x = f3(x)
+                i += 1
+            return x
+        return ret
+    return ret_fn
+
+        
+                
+
+
+
+# ct = cycle_test(add1, times2, add3)
+# identity = ct(0)
+# print(identity(5))
